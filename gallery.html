@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Dinna Ceylon Gems</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'deep-blue': '#050505',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-deep-blue text-slate-200 antialiased">
+
+    <!-- Navigation (Same) -->
+    <nav class="fixed w-full z-50 bg-deep-blue backdrop-filter backdrop-blur-sm shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <i class="fa-regular fa-gem text-gold text-3xl"></i>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-serif font-bold text-white tracking-wider">DINNA</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Home</a>
+                <a href="about.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">About</a>
+                <a href="gems.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gemstones</a>
+                <a href="export.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Export</a>
+                <a href="gallery.html"
+                    class="nav-link text-sm uppercase tracking-widest text-gold text-bold transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-deep-blue transition-all duration-300 uppercase text-xs tracking-widest font-bold">Contact
+                    Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gold text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col justify-center items-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gold text-3xl"><i
+                class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-2xl font-serif text-white hover:text-gold">Home</a>
+        <a href="about.html" class="text-2xl font-serif text-white hover:text-gold">About</a>
+        <a href="gems.html" class="text-2xl font-serif text-white hover:text-gold">Gemstones</a>
+        <a href="export.html" class="text-2xl font-serif text-white hover:text-gold">Export</a>
+        <a href="gallery.html" class="text-2xl font-serif text-gold">Gallery</a>
+        <a href="contact.html" class="text-2xl font-serif text-gold border-b border-gold pb-1">Contact Us</a>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 text-center">
+        <h1 class="text-5xl md:text-6xl font-serif text-white mb-2 fade-in-up">Visual Gallery</h1>
+        <p class="text-slate-500 text-sm uppercase tracking-widest fade-in-up delay-100">Capturing Light & Color</p>
+    </header>
+
+    <!-- Gallery Grid -->
+    <section class="container mx-auto px-4 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <!-- Item 1 (Large) -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=800&auto=format&fit=crop"
+                    alt="Ring" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- Item 2 (Video Placeholder) -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up delay-100">
+                <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                    <source src="https://videos.pexels.com/video-files/5453621/5453621-hd_1920_1080_25fps.mp4"
+                        type="video/mp4">
+                </video>
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-play text-white text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up delay-200">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=800&auto=format&fit=crop"
+                    alt="Close up" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up">
+                <img src="https://media.istockphoto.com/id/1146483163/vector/sri-lanka-map-vector-map-of-sri-lanka-in-blue-color-perfect-for-business-concepts.jpg?s=612x612&w=0&k=20&c=X7b7a7_o_k_o_k"
+                    alt="Map"
+                    class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 filter sepia">
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up delay-100">
+                <img src="https://images.unsplash.com/photo-1599707367072-cd6ad6cb3d2e?q=80&w=800&auto=format&fit=crop"
+                    alt="Blue" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white text-2xl"></i>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="gallery-item relative h-80 overflow-hidden cursor-pointer fade-in-up delay-200">
+                <img src="https://images.unsplash.com/photo-1601121141461-9d623259b158?q=80&w=800&auto=format&fit=crop"
+                    alt="Green" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <div
+                    class="overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white text-2xl"></i>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 border-t border-slate-900 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Dinna Ceylon Gems.</p>
+    </footer>
+
+    <script src="assets/JS/main.js"></script>
+</body>
+
+</html>

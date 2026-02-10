@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Dinna Ceylon Gems</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'deep-blue': '#050505',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-deep-blue text-slate-200 antialiased">
+
+    <!-- Navigation (Same) -->
+    <nav class="fixed w-full z-50 bg-deep-blue backdrop-filter backdrop-blur-sm shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <i class="fa-regular fa-gem text-gold text-3xl"></i>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-serif font-bold text-white tracking-wider">DINNA</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Home</a>
+                <a href="about.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">About</a>
+                <a href="gems.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gemstones</a>
+                <a href="export.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Export</a>
+                <a href="gallery.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 border border-gold text-gold bg-gold text-deep-blue font-bold tracking-widest text-xs uppercase transition-all duration-300">Contact
+                    Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gold text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col justify-center items-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gold text-3xl"><i
+                class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-2xl font-serif text-white hover:text-gold">Home</a>
+        <a href="about.html" class="text-2xl font-serif text-white hover:text-gold">About</a>
+        <a href="gems.html" class="text-2xl font-serif text-white hover:text-gold">Gemstones</a>
+        <a href="export.html" class="text-2xl font-serif text-white hover:text-gold">Export</a>
+        <a href="gallery.html" class="text-2xl font-serif text-white hover:text-gold">Gallery</a>
+        <a href="contact.html" class="text-2xl font-serif text-gold border-b border-gold pb-1">Contact Us</a>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-40 pb-12 text-center">
+        <h1 class="text-5xl md:text-6xl font-serif text-white mb-2 fade-in-up">Contact Export Team</h1>
+        <p class="text-gold uppercase tracking-[0.2em] text-sm fade-in-up delay-100">Direct Inquiries Only</p>
+    </header>
+
+    <!-- Content -->
+    <section class="container mx-auto px-6 pb-24">
+        <div class="flex flex-col lg:flex-row gap-16">
+
+            <!-- Contact Info -->
+            <div class="lg:w-1/3 fade-in-up delay-200">
+                <div class="bg-black/40 p-10 border-l border-gold h-full">
+                    <h3 class="text-2xl font-serif text-white mb-8">Headquarters</h3>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Visit Us</h4>
+                                <p class="text-slate-400 leading-relaxed">
+                                    No. 45, Gems Street,<br>
+                                    China Fort, Beruwala,<br>
+                                    12070, Sri Lanka.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-phone text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Call / WhatsApp
+                                </h4>
+                                <p class="text-slate-400">+94 77 123 4567</p>
+                                <p class="text-slate-400">+94 34 222 3333</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-envelope text-gold text-xl mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-1">Email</h4>
+                                <p class="text-slate-400">export@dinnagems.com</p>
+                                <p class="text-slate-400">info@dinnagems.com</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-8 border-t border-slate-800">
+                            <h4 class="text-white font-bold uppercase text-xs tracking-widest mb-4">Export Hours</h4>
+                            <p class="text-slate-400 text-sm">Mon - Fri: 9:00 AM - 6:00 PM (IST)</p>
+                            <p class="text-slate-400 text-sm">Sat: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:w-2/3 fade-in-up delay-300">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Full Name
+                                *</label>
+                            <input type="text"
+                                class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Company
+                                Name</label>
+                            <input type="text"
+                                class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Email Address
+                                *</label>
+                            <input type="email"
+                                class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Phone / WhatsApp
+                                *</label>
+                            <input type="tel"
+                                class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Country *</label>
+                        <select
+                            class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors">
+                            <option>Select Country</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>China</option>
+                            <option>Sri Lanka</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Interest</label>
+                        <div class="flex gap-4 flex-wrap">
+                            <label class="flex items-center space-x-2 text-slate-400 text-sm cursor-pointer">
+                                <input type="checkbox" class="accent-gold"> <span>Blue Sapphires</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-slate-400 text-sm cursor-pointer">
+                                <input type="checkbox" class="accent-gold"> <span>Rubies</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-slate-400 text-sm cursor-pointer">
+                                <input type="checkbox" class="accent-gold"> <span>Wholesale Lots</span>
+                            </label>
+                            <label class="flex items-center space-x-2 text-slate-400 text-sm cursor-pointer">
+                                <input type="checkbox" class="accent-gold"> <span>Custom Order</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Message</label>
+                        <textarea rows="5"
+                            class="w-full bg-slate-900 border border-slate-800 focus:border-gold text-white px-4 py-3 outline-none transition-colors"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-gold text-deep-blue font-bold px-10 py-4 uppercase tracking-widest hover:bg-white transition-colors shadow-lg">Send
+                        Inquiry</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-[400px] w-full filter grayscale hover:grayscale-0 transition-all duration-700">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.855263660578!2d79.98863631477067!3d6.540131995270119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae231db04000001%3A0x1c17223849503460!2sChina%20Fort%20Gem%20Market!5e0!3m2!1sen!2sla!4v1676648128362!5m2!1sen!2sla"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 border-t border-slate-900 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Dinna Ceylon Gems.</p>
+    </footer>
+
+    <script src="assets/JS/main.js"></script>
+</body>
+
+</html>

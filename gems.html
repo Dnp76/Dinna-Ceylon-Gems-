@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gemstone Collection | Dinna Ceylon Gems</title>
+    <meta name="description"
+        content="Explore our exclusive collection of Blue Sapphires, Rubies, Padparadschas, and Spinels. Ethically sourced and certified.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'deep-blue': '#050505',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-deep-blue text-slate-200 antialiased">
+
+    <!-- Navigation (Same) -->
+    <nav class="fixed w-full z-50 bg-deep-blue backdrop-filter backdrop-blur-sm shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <i class="fa-regular fa-gem text-gold text-3xl"></i>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-serif font-bold text-white tracking-wider">DINNA</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Home</a>
+                <a href="about.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">About</a>
+                <a href="gems.html"
+                    class="nav-link text-sm uppercase tracking-widest text-gold text-bold transition-colors">Gemstones</a>
+                <a href="export.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Export</a>
+                <a href="gallery.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-deep-blue transition-all duration-300 uppercase text-xs tracking-widest font-bold">Contact
+                    Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gold text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col justify-center items-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gold text-3xl"><i
+                class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-2xl font-serif text-white hover:text-gold">Home</a>
+        <a href="about.html" class="text-2xl font-serif text-white hover:text-gold">About</a>
+        <a href="gems.html" class="text-2xl font-serif text-gold">Gemstones</a>
+        <a href="export.html" class="text-2xl font-serif text-white hover:text-gold">Export</a>
+        <a href="gallery.html" class="text-2xl font-serif text-white hover:text-gold">Gallery</a>
+        <a href="contact.html" class="text-2xl font-serif text-gold border-b border-gold pb-1">Contact Us</a>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-32 pb-16 bg-gradient-to-b from-black to-deep-blue text-center">
+        <h1 class="text-5xl md:text-6xl font-serif text-white mb-4 fade-in-up">The Collection</h1>
+        <p class="text-slate-400 max-w-xl mx-auto px-6 fade-in-up delay-100">Hand-selected for color, clarity, and cut.
+            Each stone tells a unique story from the depths of Sri Lanka.</p>
+    </header>
+
+    <!-- Filter (Visual only for now, functional if JS added) -->
+    <div class="container mx-auto px-6 mb-12 flex flex-wrap justify-center gap-4 fade-in-up delay-200">
+        <button
+            class="px-6 py-2 border border-gold bg-gold text-deep-blue uppercase text-xs font-bold tracking-widest">All</button>
+        <button
+            class="px-6 py-2 border border-slate-700 text-slate-400 hover:border-gold hover:text-gold uppercase text-xs font-bold tracking-widest transition-all">Blue
+            Sapphire</button>
+        <button
+            class="px-6 py-2 border border-slate-700 text-slate-400 hover:border-gold hover:text-gold uppercase text-xs font-bold tracking-widest transition-all">Yellow
+            Sapphire</button>
+        <button
+            class="px-6 py-2 border border-slate-700 text-slate-400 hover:border-gold hover:text-gold uppercase text-xs font-bold tracking-widest transition-all">Ruby</button>
+        <button
+            class="px-6 py-2 border border-slate-700 text-slate-400 hover:border-gold hover:text-gold uppercase text-xs font-bold tracking-widest transition-all">Spinels</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <section class="container mx-auto px-6 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+            <!-- Item 1 -->
+            <div class="group bg-slate-900 rounded-sm overflow-hidden shadow-lg hover:shadow-gold/20 transition-all duration-300 fade-in-up cursor-pointer"
+                onclick="openGemModal('Royal Blue Sapphire', 'A vivid 3.5 carat royal blue sapphire with exceptional clarity. Certified Natural, Heated.', 'https://images.unsplash.com/photo-1618251213426-5b3211516e8b?q=80&w=800&auto=format&fit=crop')">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1618251213426-5b3211516e8b?q=80&w=800&auto=format&fit=crop"
+                        alt="Blue Sapphire"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 text-white border border-white px-4 py-2 uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Quick
+                            View</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-serif text-white mb-1 group-hover:text-gold transition-colors">Royal Blue
+                        Sapphire</h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider">3.5 Carats | Oval Cut</p>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="group bg-slate-900 rounded-sm overflow-hidden shadow-lg hover:shadow-gold/20 transition-all duration-300 fade-in-up delay-100 cursor-pointer"
+                onclick="openGemModal('Pigeon Blood Ruby', 'Rare 2.1 carat unheated ruby with intense saturation. Origin: Ratnapura.', 'https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=800&auto=format&fit=crop')">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1615655406736-b37c4fabf923?q=80&w=800&auto=format&fit=crop"
+                        alt="Ruby"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 text-white border border-white px-4 py-2 uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Quick
+                            View</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-serif text-white mb-1 group-hover:text-gold transition-colors">Pigeon Blood
+                        Ruby</h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider">2.1 Carats | Cushion Cut</p>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="group bg-slate-900 rounded-sm overflow-hidden shadow-lg hover:shadow-gold/20 transition-all duration-300 fade-in-up delay-100 cursor-pointer"
+                onclick="openGemModal('Yellow Sapphire', 'Vibrant 4.0 carat yellow sapphire, often associated with prosperity. Excellent luster.', 'https://media.istockphoto.com/id/1148822080/photo/yellow-sapphire.jpg?s=612x612&w=0&k=20&c=N_8qWvKxO7C_bYqJ9e7fQ8g9Z5wX_r4t_x6y3z_p2u8=')">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://media.istockphoto.com/id/1148822080/photo/yellow-sapphire.jpg?s=612x612&w=0&k=20&c=N_8qWvKxO7C_bYqJ9e7fQ8g9Z5wX_r4t_x6y3z_p2u8="
+                        alt="Yellow Sapphire"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 text-white border border-white px-4 py-2 uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Quick
+                            View</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-serif text-white mb-1 group-hover:text-gold transition-colors">Yellow
+                        Sapphire</h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider">4.0 Carats | Emerald Cut</p>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="group bg-slate-900 rounded-sm overflow-hidden shadow-lg hover:shadow-gold/20 transition-all duration-300 fade-in-up delay-200 cursor-pointer"
+                onclick="openGemModal('Pink Sapphire', 'A delicate 1.8 carat pink sapphire. Perfect for modern jewelry designs.', 'https://images.unsplash.com/photo-1627932824900-58800ba7815d?q=80&w=800&auto=format&fit=crop')">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1627932824900-58800ba7815d?q=80&w=800&auto=format&fit=crop"
+                        alt="Pink Sapphire"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 text-white border border-white px-4 py-2 uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Quick
+                            View</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-serif text-white mb-1 group-hover:text-gold transition-colors">Pink Sapphire
+                    </h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider">1.8 Carats | Round Cut</p>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="group bg-slate-900 rounded-sm overflow-hidden shadow-lg hover:shadow-gold/20 transition-all duration-300 fade-in-up delay-200 cursor-pointer"
+                onclick="openGemModal('Tourmaline', 'Multi-colored 5.0 carat tourmaline. A truly unique piece.', 'https://images.unsplash.com/photo-1601121141461-9d623259b158?q=80&w=800&auto=format&fit=crop')">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1601121141461-9d623259b158?q=80&w=800&auto=format&fit=crop"
+                        alt="Tourmaline"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all flex items-center justify-center">
+                        <span
+                            class="opacity-0 group-hover:opacity-100 text-white border border-white px-4 py-2 uppercase text-xs tracking-widest transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Quick
+                            View</span>
+                    </div>
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-serif text-white mb-1 group-hover:text-gold transition-colors">Green
+                        Tourmaline</h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider">5.0 Carats | Baguette Cut</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="gem-modal"
+        class="fixed inset-0 z-[60] flex items-center justify-center bg-black bg-opacity-90 hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-deep-blue w-full max-w-4xl rounded-lg overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 flex flex-col md:flex-row relative border border-slate-800">
+            <button onclick="closeGemModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10"><i
+                    class="fa-solid fa-xmark text-2xl"></i></button>
+
+            <div class="md:w-1/2 bg-black flex items-center justify-center p-8">
+                <img id="modal-img" src="" alt="Gemstone"
+                    class="max-h-[400px] object-contain shadow-2xl drop-shadow-2xl">
+            </div>
+
+            <div class="md:w-1/2 p-10 flex flex-col justify-center">
+                <h3 id="modal-title" class="text-3xl font-serif text-white mb-4">Gem Title</h3>
+                <div class="w-12 h-1 bg-gold mb-6"></div>
+                <p id="modal-desc" class="text-slate-300 mb-8 leading-relaxed font-light">Description goes here.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-8 text-sm text-slate-400">
+                    <div>
+                        <span class="block text-gold text-xs uppercase tracking-widest mb-1">Origin</span>
+                        Sri Lanka (Ceylon)
+                    </div>
+                    <div>
+                        <span class="block text-gold text-xs uppercase tracking-widest mb-1">Certification</span>
+                        GIC / NGJA
+                    </div>
+                </div>
+
+                <a href="contact.html"
+                    class="inline-block text-center px-8 py-3 bg-gold text-deep-blue font-bold uppercase tracking-widest hover:bg-white transition-colors">Inquire
+                    Price</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/JS/main.js"></script>
+</body>
+
+</html>

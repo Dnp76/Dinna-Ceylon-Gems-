@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Services | Dinna Ceylon Gems</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        'deep-blue': '#050505',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Lato"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-deep-blue text-slate-200 antialiased">
+
+    <!-- Navigation (Same) -->
+    <nav class="fixed w-full z-50 bg-deep-blue backdrop-filter backdrop-blur-sm shadow-lg py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <i class="fa-regular fa-gem text-gold text-3xl"></i>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-serif font-bold text-white tracking-wider">DINNA</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Home</a>
+                <a href="about.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">About</a>
+                <a href="gems.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gemstones</a>
+                <a href="export.html"
+                    class="nav-link text-sm uppercase tracking-widest text-gold text-bold transition-colors">Export</a>
+                <a href="gallery.html"
+                    class="nav-link text-sm uppercase tracking-widest text-slate-300 hover:text-gold transition-colors">Gallery</a>
+                <a href="contact.html"
+                    class="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-deep-blue transition-all duration-300 uppercase text-xs tracking-widest font-bold">Contact
+                    Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gold text-2xl"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col justify-center items-center space-y-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-gold text-3xl"><i
+                class="fa-solid fa-xmark"></i></button>
+        <a href="index.html" class="text-2xl font-serif text-white hover:text-gold">Home</a>
+        <a href="about.html" class="text-2xl font-serif text-white hover:text-gold">About</a>
+        <a href="gems.html" class="text-2xl font-serif text-white hover:text-gold">Gemstones</a>
+        <a href="export.html" class="text-2xl font-serif text-gold">Export</a>
+        <a href="gallery.html" class="text-2xl font-serif text-white hover:text-gold">Gallery</a>
+        <a href="contact.html" class="text-2xl font-serif text-gold border-b border-gold pb-1">Contact Us</a>
+    </div>
+
+    <!-- Header -->
+    <header class="pt-40 pb-20 text-center bg-fixed bg-cover relative"
+        style="background-image: url('https://images.unsplash.com/photo-1566576912904-7a9117f7c4c5?q=80&w=2000&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+        <div class="relative z-10 container mx-auto fade-in-up">
+            <h1 class="text-5xl md:text-6xl font-serif text-white mb-6">Global Export Services</h1>
+            <p class="text-slate-300 text-lg max-w-2xl mx-auto">Seamlessly delivering Sri Lanka's finest gems to your
+                doorstep, fully insured and certified.</p>
+        </div>
+    </header>
+
+    <!-- Process Steps -->
+    <section class="py-24 bg-deep-blue">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+
+                <div class="group fade-in-up">
+                    <div
+                        class="w-20 h-20 rounded-full border border-gold flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <i class="fa-solid fa-magnifying-glass text-3xl text-gold group-hover:text-deep-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-4">1. Selection</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Choose from our curated online inventory or
+                        request a custom sourcing order.</p>
+                </div>
+
+                <div class="group fade-in-up delay-100">
+                    <div
+                        class="w-20 h-20 rounded-full border border-gold flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <i class="fa-solid fa-file-contract text-3xl text-gold group-hover:text-deep-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-4">2. Certification</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Every gem is tested and certified by GIC, NGJA, or
+                        GRS upon request.</p>
+                </div>
+
+                <div class="group fade-in-up delay-200">
+                    <div
+                        class="w-20 h-20 rounded-full border border-gold flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <i class="fa-solid fa-box-open text-3xl text-gold group-hover:text-deep-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-4">3. Secure Packaging</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">High-security, tamper-evident packaging ensuring
+                        complete safety.</p>
+                </div>
+
+                <div class="group fade-in-up delay-300">
+                    <div
+                        class="w-20 h-20 rounded-full border border-gold flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition-colors duration-300">
+                        <i class="fa-solid fa-plane-departure text-3xl text-gold group-hover:text-deep-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-4">4. Global Delivery</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Expedited shipping via Ferrari Logistics,
+                        Malca-Amit, or FedEx.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Logistics Partners -->
+    <section class="py-20 bg-black border-t border-slate-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif text-white mb-12 fade-in-up">Our Logistics Partners</h2>
+            <div class="flex flex-wrap justify-center items-center gap-16 opacity-70">
+                <div
+                    class="text-2xl font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                    FedEx</div>
+                <div
+                    class="text-2xl font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                    Malca-Amit</div>
+                <div
+                    class="text-2xl font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                    Brinks</div>
+                <div
+                    class="text-2xl font-bold text-slate-500 uppercase tracking-widest hover:text-white transition-colors">
+                    Ferrari Logistics</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Display -->
+    <section class="py-24 bg-deep-blue relative overflow-hidden">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 fade-in-up">
+                <div
+                    class="relative p-4 border border-gold/30 bg-black/50 rotate-3 transform hover:rotate-0 transition-all duration-500 max-w-sm mx-auto md:mx-0">
+                    <div
+                        class="absolute -top-3 -right-3 w-12 h-12 bg-gold text-deep-blue flex items-center justify-center rounded-full font-bold shadow-lg">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <div class="h-64 bg-slate-800 flex items-center justify-center text-slate-600">
+                        <i class="fa-solid fa-file-certificate text-6xl"></i>
+                        <span class="block ml-2 text-sm uppercase">Certificate Preview</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in-up delay-200 text-center md:text-left">
+                <h2 class="text-4xl font-serif text-white mb-6">Guaranteed Authenticity</h2>
+                <p class="text-slate-400 mb-8 leading-relaxed">
+                    We understand that trust is the currency of the gemstone trade. All our exports are accompanied by:
+                </p>
+                <ul class="text-slate-300 space-y-4 mb-8 text-left inline-block">
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-gold"></i><span>NGJA Export
+                            License</span></li>
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-gold"></i><span>Gemological
+                            Laboratory Report</span></li>
+                    <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-gold"></i><span>Commercial
+                            Invoice & Insurance</span></li>
+                </ul>
+                <a href="contact.html"
+                    class="inline-block px-8 py-3 bg-transparent border border-white text-white uppercase tracking-widest hover:bg-white hover:text-deep-blue transition-all">
+                    Request Sample Documents
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 border-t border-slate-900 text-center text-sm text-slate-500">
+        <p>&copy; 2026 Dinna Ceylon Gems.</p>
+    </footer>
+
+    <script src="assets/JS/main.js"></script>
+</body>
+
+</html>
